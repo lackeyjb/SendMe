@@ -1,0 +1,7 @@
+<h1>Send my info to: </h1>
+
+<%= form_for :text_messages, url: text_success_path do |f| %>
+
+  <%= f.telephone_field :phone_number %>
+  <%= f.submit 'Send' %>
+<% end %>
