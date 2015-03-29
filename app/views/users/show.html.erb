@@ -1,7 +1,9 @@
-<h1>Send my info to: </h1>
-
+<br>
+<h3 class="text-center">Send my info to: </h3>
+<br>
+<div class="col-xs-3 col-md-5"></div>
 <%= form_for :text_messages, url: text_success_path do |f| %>
 
-  <%= f.telephone_field :phone_number %>
+  <%= f.telephone_field :phone_number, autofocus: true, placeholder: '5555555' %>
   <%= f.submit 'Send' %>
 <% end %>
