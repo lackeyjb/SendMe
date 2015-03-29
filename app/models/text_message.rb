@@ -11,8 +11,8 @@ class TextMessage
   def self.send_user_info(user, phone_number) 
     configure_twilio.messages.create(
       body: "#{user.name} \n #{user.email} \n #{user.addition_info}",
-      to:   "+1" + phone_number,
-      from: "+16789168205") if valid_phone_number?(phone_number)
+      to:   '+1' + phone_number,
+      from: '+16789168205') if valid_phone_number?(phone_number)
   end
 
   def self.valid_phone_number?(phone_number)
