@@ -1,5 +1,4 @@
 class TextMessage
-
   VALID_PHONE_NUMBER_REGEX = /^[0-9]+$/
 
   def self.configure_twilio
