@@ -1,9 +1,17 @@
 <br>
-<h3 class="text-center">Send my info to: </h3>
 <br>
-<div class="col-xs-3 col-md-5"></div>
-<%= form_for :text_messages, url: text_success_path do |f| %>
-
-  <%= f.telephone_field :phone_number, autofocus: true, placeholder: '5555555' %>
-  <%= f.submit 'Send', class: 'btn btn-default' %>
-<% end %>
+<div class="form-horizontal">
+  <div class="form-group">
+    <h4 class="col-sm-2 control-label">Send my info to:</h4>
+    <%= form_for :text_messages, url: text_success_path do |f| %>
+    <div class="col-sm-4">
+      <%= f.telephone_field :phone_number, autofocus: true, placeholder: '5555555', class: 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10"> 
+      <%= f.submit 'Send', class: 'btn btn-default' %>
+    <% end %>
+    </div>
+  </div>
+</div>
